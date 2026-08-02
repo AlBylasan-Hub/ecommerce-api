@@ -248,6 +248,50 @@ ecommerce-api/
 
 جميع الاختبارات الستة عشر نجحت، والنتيجة الفعلية مطابقة للنتيجة المتوقعة في كل حالة.
 
+## صور الاختبارات
+
+جميع الصور موجودة في مجلد `screenshots/`.
+
+### تشغيل السيرفر والاتصال بـ Neon
+
+![تشغيل السيرفر](screenshots/server.png)
+
+الصورة توضح رسالتي `Server is running on port 3000` و `Database connected successfully`
+معًا، وهذا يثبت أن السيرفر يعمل وأن الاتصال بقاعدة بيانات Neon تم بنجاح.
+
+### ملخص تشغيل الـ Collection في Postman
+
+![ملخص التشغيل](screenshots/runner.png)
+
+![تفاصيل التشغيل](screenshots/runner_details.png)
+
+نتيجة تشغيل الـ Collection كاملة: **31 اختبارًا ناجحًا من 31**، بدون أي فشل أو أخطاء،
+موزعة على 22 طلبًا.
+
+### صور الاختبارات الإلزامية
+
+| # | حالة الاختبار | الصورة |
+|---|---|---|
+| 1 | عرض كل المنتجات - 200 | `screenshots/test01.png` |
+| 2 | عرض منتج موجود - 200 | `screenshots/test02.png` |
+| 3 | عرض منتج غير موجود - 404 | `screenshots/test03.png` |
+| 4 | إضافة منتج صحيح - 201 | `screenshots/test04.png` |
+| 5 | إضافة منتج بدون اسم - 400 | `screenshots/test05.png` |
+| 6 | إضافة منتج بسعر سالب - 400 | `screenshots/test06.png` |
+| 7 | إضافة منتج بمخزون سالب - 400 | `screenshots/test07.png` |
+| 8 | إضافة منتج بـ SKU مكرر - 409 | `screenshots/test08.png` |
+| 9 | تعديل منتج موجود - 200 | `screenshots/test09.png` |
+| 10 | تعديل منتج غير موجود - 404 | `screenshots/test10.png` |
+| 11 | تعطيل منتج - 200 | `screenshots/test11.png` |
+| 12 | إضافة تصنيف صحيح - 201 | `screenshots/test12.png` |
+| 13 | إضافة مستخدم صحيح - 201 | `screenshots/test13.png` |
+| 14 | إضافة مستخدم ببريد مكرر - 409 | `screenshots/test14.png` |
+| 15 | إرسال JSON غير مكتمل - 400 | `screenshots/test15.png` |
+| 16 | طلب مسار غير موجود - 404 | `screenshots/test16.png` |
+
+كل صورة تُظهر في نفس الإطار: اسم الاختبار، والـ HTTP method، والمسار، والـ Body المُرسل،
+وكود الحالة الفعلي، وجسم الاستجابة، ونتيجة الـ Tests داخل Postman.
+
 ## المشاكل التي واجهتني وحلولها
 
 **المشكلة الأولى:** عند أول تشغيل ظهر الخطأ `relation "products" does not exist` رغم أن رسالة
